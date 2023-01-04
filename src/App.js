@@ -2,10 +2,8 @@ import "./App.css";
 
 import React, { useState } from "react";
 
-
 const Timer = () => {
   const [seconds, setSeconds] = useState(0);
-
   useState(() => {
     setInterval(() => {
       setSeconds((seconds) => seconds + 1);
@@ -16,7 +14,7 @@ const Timer = () => {
     <div className="App">
       <header className="App-header">
         <p>
-          This app shows seconds timer - the start moment is when this app is
+          This app shows timer with seconds - the start moment is when this app is
           opened.
         </p>
       </header>
@@ -24,18 +22,15 @@ const Timer = () => {
         <h1>Let's count!</h1>
         <p className="App-counter">{seconds}</p>
         <a href="index.html" className="App-refresher">
-          Odśwież stronę
+        Refresh the page
         </a>
       </main>
     </div>
   );
-}
-
-function App () {
-  return (
-    Timer()
-  )
 };
 
+function App() {
+  return Timer();
+}
 
 export default App;
